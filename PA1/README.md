@@ -4,25 +4,22 @@
 
 The problem should be image segmentation by optimizing cost function and scribbles image using least square.
 
-![](images/Equation1.png)
+$$J\left ( L_{i} \right )= \left ( \hat{L_{i}}(r)-\sum_{s\in N(r)}^{}w_{rs}\cdot \hat{L_{i}}(s) \right )^{2}$$
 
-**Equation 1**. Cost function
+- $L_{i}$ : scribbles label
+- $\hat{L_{i}}$ : expected label
 
-- Li : scribbles label
-- Li: expected label
+The cost function of this problem is defined by **Equation 1** To obtain the cost function, we first obtain a neighborhood matrix composed of the neighborhood weight of each pixel. Then optimize the calculated cost function and scribble image. At this time, we should use the least square.
 
-The cost function of this problem is defined by **Equation 1**. To obtain the cost function, we first obtain a neighborhood matrix composed of the neighborhood weight of each pixel. Then optimize the calculated cost function and scribble image. At this time, we should use the least square.
+![image](https://user-images.githubusercontent.com/125437452/221482234-e3d04678-9310-4b09-85ec-b6cfb6d131b4.png)
 
-![](Aspose.Words.d327dd48-e01e-4293-9220-b0c6f3bf8883.001.png)
 
-**Figure 1.** Neighborhood matrix
+The red square box in **Figure 1** is $r$-pixel, and the blue square box is kernel that determines the boundary of neighborhood. That is, the values in the blue square box become the neighborhood pixel of the $r$-pixel. In this case, the value of the neighborhood matrix is calculated as the absolute value of the difference between intensity of $s$ and intensity of $r$, or is calculated using various weight functions.
 
-The red square box in **Figure 1** is r-pixel, and the blue square box is kernel  that determines the boundary of neighborhood. That is, the values in the blue square box become the neighborhood pixel of the r-pixel. In this case, the value of the neighborhood matrix is calculated as the absolute value of the difference between intensity of s and intensity of r, or is calculated using various weight functions.
-
-- r : coordinate of center r pixel
-- s : coordinate of center of r
-- Nr : Neighborhood pixels of r
-- Neighborhood weights (wrs)
+- $r$ : coordinate of center $r$ pixel
+- $s$ : coordinate of center of $r$
+- $N(r)$ : Neighborhood pixels of $r$
+- Neighborhood weights ($w_{rs}$)
 
 The order of the total tasks is as follows.
 
@@ -30,7 +27,7 @@ The order of the total tasks is as follows.
 - Task 2. Calculate least square solution
 - Task 3. Calculate IOU
 
-**Result**
+## Result
 
 In this experiment, 3×3 kenerl was used, and the weight function used is as follows.
 
