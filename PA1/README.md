@@ -1,10 +1,10 @@
-﻿**Optimization using Least Square**
+# Optimization using Least Square
 
-**Analysis**
+## Analysis
 
 The problem should be image segmentation by optimizing cost function and scribbles image using least square.
 
-JLi=rLir-s∈N(r)wrsLis2
+![](Equation1.png)
 
 **Equation 1**. Cost function
 
