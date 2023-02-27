@@ -4,7 +4,7 @@
 
 The problem should be image segmentation by optimizing cost function and scribbles image using least square.
 
-![](Equation1.png)
+![](images/Equation1.png)
 
 **Equation 1**. Cost function
 
