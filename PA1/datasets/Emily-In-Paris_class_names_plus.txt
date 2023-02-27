@@ -1,8 +1,0 @@
-_background_ [0,0,0]
-sky [1,0,0]
-buildings [2,0,0]
-tree [3,0,0]
-hair [4,0,0]
-skin [5,0,0]
-phone [6,0,0]
-clothes [7,0,0]

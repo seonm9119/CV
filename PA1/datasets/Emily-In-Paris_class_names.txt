@@ -1,2 +1,0 @@
-background [1,0,0]
-foreground [2,0,0]
